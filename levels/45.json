@@ -1,0 +1,169 @@
+{
+  "board": [
+    ".P...",
+    ".....",
+    ".....",
+    "....."
+  ],
+  "pieces": [
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        2
+      ],
+      "fabric": "gingham",
+      "colour": "sky"
+    },
+    {
+      "id": "bear",
+      "cells": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "head": [
+        2,
+        0
+      ],
+      "fabric": "stripes",
+      "colour": "honey"
+    },
+    {
+      "id": "fox",
+      "cells": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        2,
+        1
+      ],
+      "fabric": "stripes",
+      "colour": "lavender"
+    },
+    {
+      "id": "cat",
+      "cells": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "head": [
+        0,
+        1
+      ],
+      "fabric": "stripes",
+      "colour": "sage"
+    }
+  ],
+  "rules": [
+    {
+      "type": "likes",
+      "piece": "fox",
+      "target": {
+        "feature": "pillow"
+      }
+    }
+  ],
+  "solution": [
+    {
+      "id": "bunny",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "bear",
+      "at": [
+        0,
+        1
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "fox",
+      "at": [
+        2,
+        0
+      ],
+      "rot": 2,
+      "flip": false
+    },
+    {
+      "id": "cat",
+      "at": [
+        3,
+        1
+      ],
+      "rot": 1,
+      "flip": false
+    }
+  ]
+}

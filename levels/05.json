@@ -1,0 +1,104 @@
+{
+  "board": [
+    "...",
+    "...",
+    "..."
+  ],
+  "pieces": [
+    {
+      "id": "bear",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "dots",
+      "colour": "honey"
+    },
+    {
+      "id": "cat",
+      "cells": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        2,
+        0
+      ],
+      "fabric": "stripes",
+      "colour": "lavender"
+    },
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "stripes",
+      "colour": "sky"
+    }
+  ],
+  "rules": [],
+  "solution": [
+    {
+      "id": "bear",
+      "at": [
+        0,
+        1
+      ],
+      "rot": 3,
+      "flip": false
+    },
+    {
+      "id": "cat",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "bunny",
+      "at": [
+        2,
+        1
+      ],
+      "rot": 1,
+      "flip": false
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "board": [
+    ".P..",
+    "....",
+    "...."
+  ],
+  "pieces": [
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "head": [
+        0,
+        1
+      ],
+      "fabric": "dots",
+      "colour": "sky"
+    },
+    {
+      "id": "bear",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "head": [
+        1,
+        0
+      ],
+      "fabric": "dots",
+      "colour": "rose"
+    },
+    {
+      "id": "elephant",
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        1
+      ],
+      "fabric": "dots",
+      "colour": "lavender"
+    }
+  ],
+  "rules": [
+    {
+      "type": "likes",
+      "piece": "bear",
+      "target": {
+        "feature": "pillow"
+      }
+    }
+  ],
+  "solution": [
+    {
+      "id": "bunny",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 3,
+      "flip": false
+    },
+    {
+      "id": "bear",
+      "at": [
+        2,
+        0
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "elephant",
+      "at": [
+        2,
+        1
+      ],
+      "rot": 0,
+      "flip": false
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "board": [
+    ".P..",
+    "....",
+    "N..."
+  ],
+  "pieces": [
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        1
+      ],
+      "fabric": "stripes",
+      "colour": "honey"
+    },
+    {
+      "id": "lamb",
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        1
+      ],
+      "fabric": "stripes",
+      "colour": "rose"
+    },
+    {
+      "id": "bear",
+      "cells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "gingham",
+      "colour": "biscuit"
+    }
+  ],
+  "rules": [
+    {
+      "type": "likes",
+      "piece": "bunny",
+      "target": {
+        "feature": "nightlight"
+      }
+    },
+    {
+      "type": "dislikes",
+      "piece": "lamb",
+      "target": {
+        "feature": "nightlight"
+      }
+    }
+  ],
+  "solution": [
+    {
+      "id": "bunny",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 1,
+      "flip": false
+    },
+    {
+      "id": "lamb",
+      "at": [
+        2,
+        0
+      ],
+      "rot": 1,
+      "flip": false
+    },
+    {
+      "id": "bear",
+      "at": [
+        1,
+        2
+      ],
+      "rot": 1,
+      "flip": false
+    }
+  ]
+}

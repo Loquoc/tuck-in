@@ -1,0 +1,167 @@
+{
+  "board": [
+    "...P",
+    "....",
+    "....",
+    "..#."
+  ],
+  "pieces": [
+    {
+      "id": "fox",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "head": [
+        1,
+        2
+      ],
+      "fabric": "fleece",
+      "colour": "sage"
+    },
+    {
+      "id": "cat",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "gingham",
+      "colour": "lavender"
+    },
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "head": [
+        0,
+        1
+      ],
+      "fabric": "fleece",
+      "colour": "honey"
+    },
+    {
+      "id": "elephant",
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "dots",
+      "colour": "rose"
+    }
+  ],
+  "rules": [
+    {
+      "type": "likes",
+      "piece": "cat",
+      "target": {
+        "feature": "pillow"
+      }
+    },
+    {
+      "type": "likes",
+      "piece": "elephant",
+      "target": {
+        "piece": "cat"
+      }
+    },
+    {
+      "type": "dislikes",
+      "piece": "bunny",
+      "target": {
+        "piece": "cat"
+      }
+    }
+  ],
+  "solution": [
+    {
+      "id": "fox",
+      "at": [
+        2,
+        1
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "cat",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 1,
+      "flip": false
+    },
+    {
+      "id": "bunny",
+      "at": [
+        0,
+        2
+      ],
+      "rot": 2,
+      "flip": false
+    },
+    {
+      "id": "elephant",
+      "at": [
+        0,
+        1
+      ],
+      "rot": 1,
+      "flip": false
+    }
+  ]
+}

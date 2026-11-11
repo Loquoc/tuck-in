@@ -1,0 +1,165 @@
+{
+  "board": [
+    ".....",
+    ".....",
+    ".....",
+    "....."
+  ],
+  "pieces": [
+    {
+      "id": "cat",
+      "cells": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "fleece",
+      "colour": "sky"
+    },
+    {
+      "id": "bear",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "head": [
+        1,
+        1
+      ],
+      "fabric": "dots",
+      "colour": "lavender"
+    },
+    {
+      "id": "elephant",
+      "cells": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        1
+      ],
+      "fabric": "gingham",
+      "colour": "sage"
+    },
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "head": [
+        2,
+        1
+      ],
+      "fabric": "fleece",
+      "colour": "honey"
+    }
+  ],
+  "rules": [],
+  "solution": [
+    {
+      "id": "cat",
+      "at": [
+        3,
+        0
+      ],
+      "rot": 3,
+      "flip": false
+    },
+    {
+      "id": "bear",
+      "at": [
+        1,
+        2
+      ],
+      "rot": 2,
+      "flip": false
+    },
+    {
+      "id": "elephant",
+      "at": [
+        0,
+        1
+      ],
+      "rot": 1,
+      "flip": false
+    },
+    {
+      "id": "bunny",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 2,
+      "flip": false
+    }
+  ]
+}

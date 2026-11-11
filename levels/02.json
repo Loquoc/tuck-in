@@ -1,0 +1,13 @@
+{
+  "coach": true,
+  "board": ["..", "..", ".."],
+  "pieces": [
+    {"id": "fox", "cells": [[0, 0], [1, 0], [2, 0]], "head": [0, 0], "fabric": "stripes", "colour": "sky"},
+    {"id": "cat", "cells": [[0, 0], [1, 0], [2, 0]], "head": [0, 0], "fabric": "fleece", "colour": "lavender"}
+  ],
+  "rules": [],
+  "solution": [
+    {"id": "fox", "at": [0, 0], "rot": 1, "flip": false},
+    {"id": "cat", "at": [1, 0], "rot": 1, "flip": false}
+  ]
+}

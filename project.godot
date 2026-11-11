@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+
+config_version=5
+
+[application]
+
+config/name="Tuck-In"
+config/description="A cozy packing puzzle: tuck every softie into the crib before bedtime."
+run/main_scene="res://ui/main_menu.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/quit_on_go_back=false
+config/icon="res://icon/icon_192.png"
+boot_splash/bg_color=Color(0.180392, 0.227451, 0.360784, 1)
+boot_splash/show_image=false
+
+[autoload]
+
+SaveData="*res://autoload/save_data.gd"
+Audio="*res://autoload/audio.gd"
+Router="*res://autoload/router.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1200
+window/size/window_width_override=1280
+window/size/window_height_override=800
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+buffering/agile_event_flushing=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.180392, 0.227451, 0.360784, 1)

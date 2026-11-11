@@ -1,0 +1,153 @@
+{
+  "board": [
+    "....",
+    "....",
+    "....",
+    "...."
+  ],
+  "pieces": [
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "head": [
+        1,
+        0
+      ],
+      "fabric": "gingham",
+      "colour": "sky"
+    },
+    {
+      "id": "elephant",
+      "cells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "head": [
+        1,
+        0
+      ],
+      "fabric": "fleece",
+      "colour": "rose"
+    },
+    {
+      "id": "cat",
+      "cells": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "dots",
+      "colour": "biscuit"
+    },
+    {
+      "id": "bear",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "head": [
+        1,
+        1
+      ],
+      "fabric": "gingham",
+      "colour": "lavender"
+    }
+  ],
+  "rules": [],
+  "solution": [
+    {
+      "id": "bunny",
+      "at": [
+        0,
+        1
+      ],
+      "rot": 2,
+      "flip": false
+    },
+    {
+      "id": "elephant",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 1,
+      "flip": false
+    },
+    {
+      "id": "cat",
+      "at": [
+        2,
+        0
+      ],
+      "rot": 2,
+      "flip": false
+    },
+    {
+      "id": "bear",
+      "at": [
+        2,
+        2
+      ],
+      "rot": 2,
+      "flip": false
+    }
+  ]
+}

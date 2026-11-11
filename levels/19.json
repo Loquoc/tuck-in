@@ -1,0 +1,120 @@
+{
+  "board": [
+    "....",
+    "....",
+    "...."
+  ],
+  "pieces": [
+    {
+      "id": "cat",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "fleece",
+      "colour": "honey"
+    },
+    {
+      "id": "fox",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "fleece",
+      "colour": "sage"
+    },
+    {
+      "id": "lamb",
+      "cells": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "head": [
+        2,
+        0
+      ],
+      "fabric": "dots",
+      "colour": "biscuit"
+    }
+  ],
+  "rules": [
+    {
+      "type": "likes",
+      "piece": "cat",
+      "target": {
+        "piece": "fox"
+      }
+    }
+  ],
+  "solution": [
+    {
+      "id": "cat",
+      "at": [
+        1,
+        0
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "fox",
+      "at": [
+        2,
+        1
+      ],
+      "rot": 2,
+      "flip": false
+    },
+    {
+      "id": "lamb",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 1,
+      "flip": false
+    }
+  ]
+}

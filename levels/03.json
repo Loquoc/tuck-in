@@ -1,0 +1,76 @@
+{
+  "board": [
+    "...",
+    "...",
+    "..."
+  ],
+  "pieces": [
+    {
+      "id": "bear",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "gingham",
+      "colour": "biscuit"
+    },
+    {
+      "id": "fox",
+      "cells": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "fleece",
+      "colour": "sage"
+    }
+  ],
+  "rules": [],
+  "solution": [
+    {
+      "id": "bear",
+      "at": [
+        1,
+        1
+      ],
+      "rot": 2,
+      "flip": false
+    },
+    {
+      "id": "fox",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 1,
+      "flip": false
+    }
+  ]
+}

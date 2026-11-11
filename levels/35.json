@@ -1,0 +1,157 @@
+{
+  "board": [
+    "....",
+    "....",
+    "....",
+    "...."
+  ],
+  "pieces": [
+    {
+      "id": "bear",
+      "cells": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "head": [
+        1,
+        1
+      ],
+      "fabric": "gingham",
+      "colour": "sage"
+    },
+    {
+      "id": "lamb",
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "head": [
+        1,
+        0
+      ],
+      "fabric": "dots",
+      "colour": "honey"
+    },
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        0
+      ],
+      "fabric": "stripes",
+      "colour": "rose"
+    },
+    {
+      "id": "cat",
+      "cells": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "head": [
+        1,
+        0
+      ],
+      "fabric": "stripes",
+      "colour": "biscuit"
+    }
+  ],
+  "rules": [],
+  "solution": [
+    {
+      "id": "bear",
+      "at": [
+        0,
+        2
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "lamb",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "bunny",
+      "at": [
+        2,
+        0
+      ],
+      "rot": 3,
+      "flip": false
+    },
+    {
+      "id": "cat",
+      "at": [
+        2,
+        1
+      ],
+      "rot": 0,
+      "flip": false
+    }
+  ]
+}

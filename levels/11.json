@@ -1,0 +1,84 @@
+{
+  "board": [
+    "..P",
+    "...",
+    "..."
+  ],
+  "pieces": [
+    {
+      "id": "lamb",
+      "cells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "head": [
+        0,
+        2
+      ],
+      "fabric": "dots",
+      "colour": "sage"
+    },
+    {
+      "id": "bunny",
+      "cells": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "head": [
+        1,
+        0
+      ],
+      "fabric": "gingham",
+      "colour": "sky"
+    }
+  ],
+  "rules": [
+    {
+      "type": "likes",
+      "piece": "bunny",
+      "target": {
+        "feature": "pillow"
+      }
+    }
+  ],
+  "solution": [
+    {
+      "id": "lamb",
+      "at": [
+        0,
+        0
+      ],
+      "rot": 0,
+      "flip": false
+    },
+    {
+      "id": "bunny",
+      "at": [
+        1,
+        1
+      ],
+      "rot": 1,
+      "flip": false
+    }
+  ]
+}
