@@ -5,6 +5,8 @@ extends Node2D
 const LEFT_BAR := 190.0
 const TAP_SLOP := 22.0
 const TAP_MS := 300
+## How far ahead of the finger a carried softie is drawn, in seconds of motion.
+const LEAD_SECONDS := 0.06
 
 var level: LevelData
 var state: BoardState
@@ -215,12 +217,27 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.pressed and drag.is_empty():
 			_press(event.index, event.position)
 		elif not event.pressed and drag.get("index", -1) == event.index:
+			# Land exactly under the finger, without any lead.
+			drag.pos = event.position
+			drag.vel = Vector2.ZERO
+			_follow(0.0)
 			_release()
 	elif event is InputEventScreenDrag and drag.get("index", -1) == event.index:
-		drag.pos = event.position
+		_track(event.position)
 		if not drag.moved and drag.pos.distance_to(drag.start) > TAP_SLOP:
 			drag.moved = true
 		_follow(0.0)
+
+
+## Records a new finger position and keeps a smoothed finger velocity.
+func _track(point: Vector2) -> void:
+	var now := Time.get_ticks_usec()
+	var dt := (now - int(drag.at_us)) / 1000000.0
+	if dt > 0.002:
+		var v: Vector2 = (point - drag.pos) / dt
+		drag.vel = drag.vel.lerp(v, 0.6)
+	drag.pos = point
+	drag.at_us = now
 
 
 func _piece_at(point: Vector2) -> PieceView:
@@ -238,6 +255,7 @@ func _press(index: int, point: Vector2) -> void:
 	drag = {
 		"index": index, "piece": pv, "start": point, "pos": point, "moved": false,
 		"time": Time.get_ticks_msec(), "rise": 0.0, "before": state.snapshot(),
+		"vel": Vector2.ZERO, "at_us": Time.get_ticks_usec(),
 		# The point of the softie under the finger, in its own unscaled space.
 		"grip": (point - pv.position) / pv.scale.x,
 	}
@@ -259,8 +277,14 @@ func _process(delta: float) -> void:
 func _follow(delta: float) -> void:
 	var pv: PieceView = drag.piece
 	drag.rise = move_toward(drag.rise, 1.0, delta * 9.0)
+	# A finger that has stopped sends no more events, so let the lead fade.
+	if Time.get_ticks_usec() - int(drag.at_us) > 50000:
+		drag.vel = drag.vel.lerp(Vector2.ZERO, minf(1.0, delta * 20.0))
+	# A frame reaches the screen a few frames after the touch it shows, so
+	# the softie is drawn where the finger is heading, not where it was.
+	var lead: Vector2 = (drag.vel * LEAD_SECONDS).limit_length(cell * 0.8)
 	# Hold the softie a little above the finger so it stays visible.
-	pv.position = drag.pos - drag.grip * pv.scale.x + Vector2(0, -cell * 0.2 * drag.rise)
+	pv.position = drag.pos + lead - drag.grip * pv.scale.x + Vector2(0, -cell * 0.2 * drag.rise)
 	var anchor := _board.anchor_for(pv.top_left())
 	var cells := state.cells_at(pv.id, anchor, pv.rot, pv.flip)
 	var on_board := cells.filter(func(c: Vector2i) -> bool: return level.open.has(c))
