@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  GODOT_VERSION: 4.7.2
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: chickensoft-games/setup-godot@v2
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: false
+
+      # Import project resources and fail on any script parse/load error.
+      # Godot can exit 0 even when a script fails to compile, so scan the log.
+      - name: Import project and check scripts
+        run: |
+          godot --headless --path . --import 2>&1 | tee import.log
+          if grep -E "SCRIPT ERROR|Parse Error|Failed to load script" import.log; then
+            echo "::error::Script errors found during import"
+            exit 1
+          fi
+
+      # tests/run_tests.gd quits with a non-zero code if any test fails.
+      - name: Unit tests
+        run: godot --headless --path . -s tests/run_tests.gd
+
+      # tools/verify_levels.gd quits non-zero if any level is invalid or unsolvable.
+      - name: Verify levels
+        run: godot --headless --path . -s tools/verify_levels.gd
